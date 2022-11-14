@@ -1,7 +1,7 @@
 # BitcoinTrustworthyTransactionProject
 
 # Project Summary
-Our proposed final project was to create a graph representing a bitcoin network and given two users and some conditions, ouptut a path/result.
+Our proposed final project was to create a class representing a bitcoin network and given two users and some conditions, ouptut a path/result.
 
 # Code
 All code files can be found in the code/ directory. To run the code:
