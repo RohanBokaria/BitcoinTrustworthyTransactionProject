@@ -16,5 +16,3 @@ Our test data was taken using Stanford Large Network Dataset Collection. It is B
 # Documents
 Our signed contract and development log can be found in the documents/ directory.
 
-# Feedback
-All feedback from our project mentor can be found in the feedback/ directory.
