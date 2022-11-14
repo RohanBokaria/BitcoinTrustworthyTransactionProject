@@ -3,7 +3,6 @@
 # Project Summary
 Our proposed final project was to create a graph representing a bitcoin network and given two users and some conditions, ouptut a path/result.
 
-
 # Code
 All code files can be found in the code/ directory. To run the code:
 
@@ -12,7 +11,7 @@ All code files can be found in the code/ directory. To run the code:
 3. Insert any two integers in the command line.
 
 # Data
-Our test data was taken using preliminary rock data, stored as a .txt file in the data/ directory.
+Our test data was taken using Stanford Large Network Dataset Collection. It is Bitcoin OTC trust weighted signed network. The link is attached here: http://snap.stanford.edu/data/soc-sign-bitcoin-otc.html.
 
 # Documents
 Our signed contract and development log can be found in the documents/ directory.
