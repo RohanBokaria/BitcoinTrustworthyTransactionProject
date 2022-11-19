@@ -1,6 +1,6 @@
 lib/CMakeFiles/lodepng.dir/lodepng/lodepng.cpp.o: \
-  /workspaces/cs225/release-f22/CS225_Final_Project/lib/lodepng/lodepng.cpp \
-  /workspaces/cs225/release-f22/CS225_Final_Project/lib/lodepng/lodepng.h \
+  /workspaces/cs225/release-f22/BitcoinTrustworthyTransactionProject/code/lib/lodepng/lodepng.cpp \
+  /workspaces/cs225/release-f22/BitcoinTrustworthyTransactionProject/code/lib/lodepng/lodepng.h \
   /usr/include/string.h \
   /usr/include/aarch64-linux-gnu/bits/libc-header-start.h \
   /usr/include/features.h /usr/include/features-time64.h \

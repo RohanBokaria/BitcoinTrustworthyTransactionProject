@@ -1,4 +1,4 @@
-# Install script for directory: /workspaces/cs225/release-f22/CS225_Final_Project/src
+# Install script for directory: /workspaces/cs225/release-f22/BitcoinTrustworthyTransactionProject/code/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

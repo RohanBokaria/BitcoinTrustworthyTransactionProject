@@ -1,5 +1,5 @@
 lib/CMakeFiles/cs225.dir/cs225/PNG.cpp.o: \
-  /workspaces/cs225/release-f22/CS225_Final_Project/lib/cs225/PNG.cpp \
+  /workspaces/cs225/release-f22/BitcoinTrustworthyTransactionProject/code/lib/cs225/PNG.cpp \
   /usr/bin/../lib/gcc/aarch64-linux-gnu/11/../../../../include/c++/11/iostream \
   /usr/bin/../lib/gcc/aarch64-linux-gnu/11/../../../../include/aarch64-linux-gnu/c++/11/bits/c++config.h \
   /usr/bin/../lib/gcc/aarch64-linux-gnu/11/../../../../include/aarch64-linux-gnu/c++/11/bits/os_defines.h \
@@ -219,13 +219,13 @@ lib/CMakeFiles/cs225.dir/cs225/PNG.cpp.o: \
   /usr/bin/../lib/gcc/aarch64-linux-gnu/11/../../../../include/c++/11/debug/safe_local_iterator.h \
   /usr/bin/../lib/gcc/aarch64-linux-gnu/11/../../../../include/c++/11/debug/safe_local_iterator.tcc \
   /usr/bin/../lib/gcc/aarch64-linux-gnu/11/../../../../include/c++/11/pstl/execution_defs.h \
-  /workspaces/cs225/release-f22/CS225_Final_Project/lib/lodepng/lodepng.h \
+  /workspaces/cs225/release-f22/BitcoinTrustworthyTransactionProject/code/lib/lodepng/lodepng.h \
   /usr/include/string.h /usr/include/strings.h \
-  /workspaces/cs225/release-f22/CS225_Final_Project/lib/cs225/PNG.h \
-  /workspaces/cs225/release-f22/CS225_Final_Project/lib/cs225/HSLAPixel.h \
+  /workspaces/cs225/release-f22/BitcoinTrustworthyTransactionProject/code/lib/cs225/PNG.h \
+  /workspaces/cs225/release-f22/BitcoinTrustworthyTransactionProject/code/lib/cs225/HSLAPixel.h \
   /usr/bin/../lib/gcc/aarch64-linux-gnu/11/../../../../include/c++/11/sstream \
   /usr/bin/../lib/gcc/aarch64-linux-gnu/11/../../../../include/c++/11/bits/sstream.tcc \
-  /workspaces/cs225/release-f22/CS225_Final_Project/lib/cs225/RGB_HSL.h \
+  /workspaces/cs225/release-f22/BitcoinTrustworthyTransactionProject/code/lib/cs225/RGB_HSL.h \
   /usr/bin/../lib/gcc/aarch64-linux-gnu/11/../../../../include/c++/11/cmath \
   /usr/include/math.h /usr/include/aarch64-linux-gnu/bits/math-vector.h \
   /usr/include/aarch64-linux-gnu/bits/libm-simd-decl-stubs.h \
