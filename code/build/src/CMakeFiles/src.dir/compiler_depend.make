@@ -254,8 +254,33 @@ src/CMakeFiles/src.dir/BitcoinNetwork.cpp.o: ../src/BitcoinNetwork.cpp \
   /usr/include/c++/11/functional \
   /usr/include/c++/11/bits/refwrap.h \
   /usr/include/c++/11/bits/std_function.h \
-  /usr/include/c++/11/pstl/execution_defs.h
+  /usr/include/c++/11/pstl/execution_defs.h \
+  ../src/Compare.h
 
+src/CMakeFiles/src.dir/Compare.cpp.o: ../src/Compare.cpp \
+  ../src/Compare.h \
+  /usr/include/c++/11/utility \
+  /usr/include/aarch64-linux-gnu/c++/11/bits/c++config.h \
+  /usr/include/aarch64-linux-gnu/c++/11/bits/os_defines.h \
+  /usr/include/features.h \
+  /usr/include/features-time64.h \
+  /usr/include/aarch64-linux-gnu/bits/wordsize.h \
+  /usr/include/aarch64-linux-gnu/bits/timesize.h \
+  /usr/include/stdc-predef.h \
+  /usr/include/aarch64-linux-gnu/sys/cdefs.h \
+  /usr/include/aarch64-linux-gnu/bits/long-double.h \
+  /usr/include/aarch64-linux-gnu/gnu/stubs.h \
+  /usr/include/aarch64-linux-gnu/gnu/stubs-lp64.h \
+  /usr/include/aarch64-linux-gnu/c++/11/bits/cpu_defines.h \
+  /usr/include/c++/11/pstl/pstl_config.h \
+  /usr/include/c++/11/bits/stl_relops.h \
+  /usr/include/c++/11/bits/stl_pair.h \
+  /usr/include/c++/11/bits/move.h \
+  /usr/include/c++/11/type_traits \
+  /usr/include/c++/11/initializer_list
+
+
+../src/Compare.cpp:
 
 /usr/include/c++/11/pstl/execution_defs.h:
 
@@ -730,6 +755,8 @@ src/CMakeFiles/src.dir/BitcoinNetwork.cpp.o: ../src/BitcoinNetwork.cpp \
 /usr/include/c++/11/bits/basic_ios.h:
 
 /usr/include/c++/11/debug/safe_container.h:
+
+../src/Compare.h:
 
 /usr/include/c++/11/debug/safe_local_iterator.h:
 

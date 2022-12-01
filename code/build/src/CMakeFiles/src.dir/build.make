@@ -83,17 +83,33 @@ src/CMakeFiles/src.dir/BitcoinNetwork.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/src.dir/BitcoinNetwork.cpp.s"
 	cd /workspaces/cs225/release-f22/BitcoinTrustworthyTransactionProject/code/build/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspaces/cs225/release-f22/BitcoinTrustworthyTransactionProject/code/src/BitcoinNetwork.cpp -o CMakeFiles/src.dir/BitcoinNetwork.cpp.s
 
+src/CMakeFiles/src.dir/Compare.cpp.o: src/CMakeFiles/src.dir/flags.make
+src/CMakeFiles/src.dir/Compare.cpp.o: ../src/Compare.cpp
+src/CMakeFiles/src.dir/Compare.cpp.o: src/CMakeFiles/src.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspaces/cs225/release-f22/BitcoinTrustworthyTransactionProject/code/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/CMakeFiles/src.dir/Compare.cpp.o"
+	cd /workspaces/cs225/release-f22/BitcoinTrustworthyTransactionProject/code/build/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/src.dir/Compare.cpp.o -MF CMakeFiles/src.dir/Compare.cpp.o.d -o CMakeFiles/src.dir/Compare.cpp.o -c /workspaces/cs225/release-f22/BitcoinTrustworthyTransactionProject/code/src/Compare.cpp
+
+src/CMakeFiles/src.dir/Compare.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/src.dir/Compare.cpp.i"
+	cd /workspaces/cs225/release-f22/BitcoinTrustworthyTransactionProject/code/build/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspaces/cs225/release-f22/BitcoinTrustworthyTransactionProject/code/src/Compare.cpp > CMakeFiles/src.dir/Compare.cpp.i
+
+src/CMakeFiles/src.dir/Compare.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/src.dir/Compare.cpp.s"
+	cd /workspaces/cs225/release-f22/BitcoinTrustworthyTransactionProject/code/build/src && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspaces/cs225/release-f22/BitcoinTrustworthyTransactionProject/code/src/Compare.cpp -o CMakeFiles/src.dir/Compare.cpp.s
+
 # Object files for target src
 src_OBJECTS = \
-"CMakeFiles/src.dir/BitcoinNetwork.cpp.o"
+"CMakeFiles/src.dir/BitcoinNetwork.cpp.o" \
+"CMakeFiles/src.dir/Compare.cpp.o"
 
 # External object files for target src
 src_EXTERNAL_OBJECTS =
 
 src/libsrc.a: src/CMakeFiles/src.dir/BitcoinNetwork.cpp.o
+src/libsrc.a: src/CMakeFiles/src.dir/Compare.cpp.o
 src/libsrc.a: src/CMakeFiles/src.dir/build.make
 src/libsrc.a: src/CMakeFiles/src.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/workspaces/cs225/release-f22/BitcoinTrustworthyTransactionProject/code/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libsrc.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/workspaces/cs225/release-f22/BitcoinTrustworthyTransactionProject/code/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library libsrc.a"
 	cd /workspaces/cs225/release-f22/BitcoinTrustworthyTransactionProject/code/build/src && $(CMAKE_COMMAND) -P CMakeFiles/src.dir/cmake_clean_target.cmake
 	cd /workspaces/cs225/release-f22/BitcoinTrustworthyTransactionProject/code/build/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/src.dir/link.txt --verbose=$(VERBOSE)
 

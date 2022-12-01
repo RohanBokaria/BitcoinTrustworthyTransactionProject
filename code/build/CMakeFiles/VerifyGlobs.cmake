@@ -37,6 +37,7 @@ endif()
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "/workspaces/cs225/release-f22/BitcoinTrustworthyTransactionProject/code/src/*.cpp")
 set(OLD_GLOB
   "/workspaces/cs225/release-f22/BitcoinTrustworthyTransactionProject/code/src/BitcoinNetwork.cpp"
+  "/workspaces/cs225/release-f22/BitcoinTrustworthyTransactionProject/code/src/Compare.cpp"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")

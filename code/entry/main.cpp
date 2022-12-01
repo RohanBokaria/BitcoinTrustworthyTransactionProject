@@ -1,22 +1,25 @@
-#include <iostream> 
+#include <iostream>
+#include <thread> 
 #include "BitcoinNetwork.h"
+#include <time.h>
+// void findDistance(BitcoinNetwork b, int start) {
+//     cout << b.findSingleSourceShortestPathDistance(start) << endl;
+// }
+// thread th1(findDistance, b, startNode, endNode);
+// th1.join();
+
 int main(int argc, char* argv[]) {
+    int start = clock();
     // if(argc < 3) {
     //     cout << "Invalid command line arguments!!!!" << endl;
     //     return 0;
     // }
     // int startNode = stoi(argv[1]);
     // int endNode = stoi(argv[2]);
-
     BitcoinNetwork b;
     b.createNetwork("../../data/soc-sign-bitcoinotc.csv");
-    cout << b.hasNegativeCycle() << endl;
-
-
-    // bool canReach = b.canReach(startNode, endNode);
-    // if(canReach) {
-    //     cout << "You can make a transaction between these two individuals!!" << endl;
-    // } else {
-    //     cout << "Can not make a transaction between these two individuals!!!" << endl;
-    // }
+    b.calcBetweenessCentrality();
+    int end = clock();
+    std::cout << "it took " << end - start << " ticks, or " << ((float)end - start)/CLOCKS_PER_SEC << "seconds." << std::endl;
 }
+

@@ -155,6 +155,30 @@ BitcoinNetwork.cpp.s:
 	cd /workspaces/cs225/release-f22/BitcoinTrustworthyTransactionProject/code/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/BitcoinNetwork.cpp.s
 .PHONY : BitcoinNetwork.cpp.s
 
+Compare.o: Compare.cpp.o
+.PHONY : Compare.o
+
+# target to build an object file
+Compare.cpp.o:
+	cd /workspaces/cs225/release-f22/BitcoinTrustworthyTransactionProject/code/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/Compare.cpp.o
+.PHONY : Compare.cpp.o
+
+Compare.i: Compare.cpp.i
+.PHONY : Compare.i
+
+# target to preprocess a source file
+Compare.cpp.i:
+	cd /workspaces/cs225/release-f22/BitcoinTrustworthyTransactionProject/code/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/Compare.cpp.i
+.PHONY : Compare.cpp.i
+
+Compare.s: Compare.cpp.s
+.PHONY : Compare.s
+
+# target to generate assembly for a file
+Compare.cpp.s:
+	cd /workspaces/cs225/release-f22/BitcoinTrustworthyTransactionProject/code/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/Compare.cpp.s
+.PHONY : Compare.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -167,6 +191,9 @@ help:
 	@echo "... BitcoinNetwork.o"
 	@echo "... BitcoinNetwork.i"
 	@echo "... BitcoinNetwork.s"
+	@echo "... Compare.o"
+	@echo "... Compare.i"
+	@echo "... Compare.s"
 .PHONY : help
 
 
