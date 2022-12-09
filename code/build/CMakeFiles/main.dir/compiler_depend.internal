@@ -265,4 +265,6 @@ CMakeFiles/main.dir/entry/main.cpp.o
  /usr/include/c++/11/functional
  /usr/include/c++/11/bits/std_function.h
  /usr/include/c++/11/pstl/execution_defs.h
+ /usr/include/c++/11/stack
+ /usr/include/c++/11/bits/stl_stack.h
 

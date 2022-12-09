@@ -96,7 +96,6 @@ vector<int> BitcoinNetwork::findSingleSourceShortestPath(int start, int end) {
     return path;
 }
 
-
 vector<unordered_map<int,int>> BitcoinNetwork::findSingleSourceShortestPathHelper(int start) {
     unordered_map<int, int> distanceMap;
     unordered_map<int, bool> visitedMap;
@@ -155,122 +154,48 @@ int BitcoinNetwork::findSingleSourceShortestPathDistance(int start, int end) {
     return INT_MAX;
 }
 
-
-unordered_map<int, double> BitcoinNetwork::calcBetweenessCentrality() {
-    unordered_map<int, double> betweenessCentralityMap;
-    vector<int> currPath;
-    vector<vector<int>> allPaths;
-    for(auto const& [start, edges] : adjList_) {
-        if(betweenessCentralityMap.count(start) == 0) {
-            betweenessCentralityMap[start];
-        }
-        unordered_map<int, unordered_set<int>> previousMap = betweenessCentralityHelper(start);
-        for(auto const& [node, previousNodes] : previousMap) {
-            currPath.push_back(node);
-            dfs(node, start, currPath, allPaths, previousMap);
-            for(vector<int> path : allPaths) {
-                for(size_t i = 1; i < path.size() - 1; i++) {
-                    betweenessCentralityMap[path[i]] += (double)1/(allPaths.size());
-                }
-            }
-            currPath.clear();
-            allPaths.clear();
-    //         int numShortestPaths = previousNodes.size();
-    //         for(int prev : previousNodes) {
-    //             nextMap[prev].insert(node);
-    //             if(prev != start) {
-    //                 q.push(prev);
-    //             }
-    //         }
-    //         while(!q.empty()) {
-    //             int curr = q.front();
-    //             q.pop();
-    //             numShortestPaths += previousMap[curr].size() - 1;
-    //             for(int previousNode : previousMap[curr]) {
-    //                 nextMap[previousNode].insert(curr);
-    //                 if(previousNode != start) {
-    //                     q.push(previousNode);
-    //                 }
-    //             }
-    //         }
-    //         dfs(start, node, nextMap, freqMap);
-    //         cout << "Start: " << start << ", End: " << node << endl;
-
-    //         for(auto const& [key, value] : freqMap) {
-    //             betweenessCentralityMap[key] += ((double)value/numShortestPaths);
-    //             cout << key << ", " << betweenessCentralityMap[key] << endl;
-    //         }
-    //         // nextMap.clear();
-    //         // freqMap.clear();
+int BitcoinNetwork::numberOfStronglyConnectedComponents() {
+    int id = 0;
+    int sccCount = 0;
+    unordered_map<int, int> idMap;
+    unordered_map<int, int> lowMap;
+    unordered_map<int, bool> onStackMap;
+    stack<int> st;
+    for(auto const& [node, neighbors] : adjList_) {
+        idMap[node] = -1;
+        lowMap[node];
+        onStackMap[node];
+    }
+    for(auto const& [node, neighbors] : adjList_){
+        if(idMap[node] == -1) {
+            dfs(node, st, onStackMap, idMap, lowMap, id, sccCount);
         }
     }
-    return betweenessCentralityMap;
+    return sccCount;
 }
+void BitcoinNetwork::dfs(int node, stack<int>& st, unordered_map<int, bool>& onStackMap, unordered_map<int, int>& idMap, unordered_map<int, int>& lowMap, int& id, int& sccCount) {
+    st.push(node);
+    onStackMap[node] = true;
+    idMap[node] = lowMap[node] = id++;
 
-void BitcoinNetwork::dfs(int curr, int start, vector<int>& currPath, vector<vector<int>>& allPaths, const unordered_map<int, unordered_set<int>>& previousMap) {
-    if(curr == start) {
-        allPaths.push_back(currPath);
-        return;
+    for(auto const& [neighbor, edgeWeight] : adjList_[node]) {
+        if(idMap[neighbor] == -1) dfs(neighbor, st, onStackMap, idMap, lowMap, id, sccCount);
+        if(onStackMap[neighbor]) lowMap[node] = min(lowMap[node], lowMap[neighbor]);
     }
-    for(int previousNode : previousMap.at(curr)) {
-        currPath.push_back(previousNode);
-        dfs(previousNode, start, currPath, allPaths, previousMap);
-        currPath.pop_back();
-    }
-}
-
-unordered_map<int, unordered_set<int>> BitcoinNetwork::betweenessCentralityHelper(int start) {
-    unordered_map<int, int> distanceMap;
-    unordered_map<int, bool> visitedMap;
-    unordered_map<int, unordered_set<int>> previousMap;
-    for(auto const& [key, value] : adjList_) {
-            distanceMap[key] = INT_MAX;
-            visitedMap[key] = false;
-    }
-    distanceMap[start] = 0;
-    priority_queue<pair<int, int>, vector<pair<int,int>>, Compare> pq;
-    pq.push({start, 0});
-    while(!pq.empty()) {
-        auto [node, distance] = pq.top();
-        visitedMap[node] = true;
-        pq.pop();
-        if(distance > distanceMap[node]) continue;
-        for(auto const& [neighbor, edgeWeight] : adjList_[node]) {
-            if(visitedMap[neighbor]) continue;
-            int newDistance = distanceMap[node] + edgeWeight;
-            if(newDistance <= distanceMap[neighbor]) {
-                if(newDistance < distanceMap[neighbor]) {
-                    previousMap[neighbor].clear();
-                }
-                if(previousMap[neighbor].count(node) == 0) {
-                    previousMap[neighbor].insert(node);
-                    pq.push({neighbor, newDistance});
-                }
-                distanceMap[neighbor] = newDistance;
-            }
+    if(idMap[node] == lowMap[node]) {
+        int currNode = st.top();
+        st.pop();
+        while(currNode != node) {
+            onStackMap[currNode] = false;
+            lowMap[currNode] = idMap[node];
+            currNode = st.top();
+            st.pop();
         }
+        onStackMap[node] = false;
+        lowMap[node] = idMap[node];
+        sccCount++;
     }
-    return previousMap;
 }
-
-
-
-
-// Finds the number of connected components using dfs algorithim each time a new node is encountered
-// Time Complexity: O(n)
-// Space Complexity: O(n)
-
-// int BitcoinNetwork::numberOfConnectedComponents() {
-//     int connectedComponents = 0;
-//     unordered_set<int> visited;
-//     for(auto const& [node, edges] : adjList_) {
-//         if(visited.count(node) == 0) {
-//             connectedComponents++;
-//             dfs(node, visited);
-//         }
-//     }
-//     return connectedComponents;
-// } 
 
 //helper method to parse csv data to create adjacency list for graph
 vector<int> BitcoinNetwork::splitString(string row) {
