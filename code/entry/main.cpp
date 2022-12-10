@@ -12,7 +12,7 @@ int main(int argc, char* argv[]) {
     int startNode = stoi(argv[1]);
     int endNode = stoi(argv[2]);
     BitcoinNetwork b;
-    b.createNetwork("../../data/soc-sign-bitcoinotc.csv");
+    b.createNetwork("../../data/scc-complex.csv");
     cout << "Number of Strongly Connected Components: " << b.numberOfStronglyConnectedComponents() << endl;
 }
 

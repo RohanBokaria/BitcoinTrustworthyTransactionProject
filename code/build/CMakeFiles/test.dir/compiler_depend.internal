@@ -303,4 +303,6 @@ CMakeFiles/test.dir/tests/tests.cpp.o
  /usr/include/c++/11/bits/refwrap.h
  /usr/include/c++/11/bits/std_function.h
  /usr/include/c++/11/pstl/execution_defs.h
+ /usr/include/c++/11/stack
+ /usr/include/c++/11/bits/stl_stack.h
 

@@ -301,8 +301,12 @@ CMakeFiles/test.dir/tests/tests.cpp.o: ../tests/tests.cpp \
   /usr/include/c++/11/functional \
   /usr/include/c++/11/bits/refwrap.h \
   /usr/include/c++/11/bits/std_function.h \
-  /usr/include/c++/11/pstl/execution_defs.h
+  /usr/include/c++/11/pstl/execution_defs.h \
+  /usr/include/c++/11/stack \
+  /usr/include/c++/11/bits/stl_stack.h
 
+
+/usr/include/c++/11/stack:
 
 /usr/include/c++/11/bits/refwrap.h:
 
@@ -767,6 +771,8 @@ CMakeFiles/test.dir/tests/tests.cpp.o: ../tests/tests.cpp \
 /usr/include/aarch64-linux-gnu/bits/wordsize.h:
 
 /usr/include/c++/11/cassert:
+
+/usr/include/c++/11/bits/stl_stack.h:
 
 /usr/include/catch2/internal/catch_decomposer.hpp:
 

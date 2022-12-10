@@ -25,6 +25,8 @@ class BitcoinNetwork {
         vector<int> findSingleSourceShortestPath(int start, int end);
         //Uses Tarjan's algorithm to determine the number of strongly connected components in the bitcoin network
         int numberOfStronglyConnectedComponents();
+        // uses breadth first search to see if there is a path from the start node to the end node
+        bool isValid(int start, int end);
     private:
         //map storing the adjacency list of the bitcoin network
         unordered_map<int, vector<pair<int, int>>> adjList_;
@@ -33,8 +35,6 @@ class BitcoinNetwork {
         vector<unordered_map<int,int>> findSingleSourceShortestPathHelper(int start);
         //dept first search helper Method used to find number of strongly connected components
         void dfs(int node, stack<int>& st, unordered_map<int, bool>& onStackMap, unordered_map<int, int>& idMap, unordered_map<int, int>& lowMap, int& id, int& sccCount);
-        // uses breadth first search to see if there is a path from the start node to the end node
-        bool isValid(int start, int end);
         //used Bellman-Ford Algorithm to detect negative cycles, led us to change weights from -10 to 10, to 1 to 21 where 1 is the highest trustworthiness and 21 is the lowest trustworthiness
         bool hasNegativeCycle();
 };
