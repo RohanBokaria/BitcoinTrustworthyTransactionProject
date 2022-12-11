@@ -4,9 +4,8 @@ Djikstra's Algorithm:
         int findSingleSourceShortestPathDistance(int start, int end) 
             - find the shortest distance (most trustworthy path) bewteen the start and end node
             
-            -
             
-        findSingleSourceShortestPath(int start, int end)
+        vector<int> findSingleSourceShortestPath(int start, int end)
             - find the shortest(most trustworthy) path between the start and end node
         
 Tarjan's Algorithm:
