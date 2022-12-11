@@ -6,7 +6,7 @@ Djikstra's Algorithm:
             
             
         vector<int> findSingleSourceShortestPath(int start, int end)
-            - find the shortest(most trustworthy) path between the start and end node
+            - find the shortest (most trustworthy) path between the start and end node
         
 Tarjan's Algorithm:
         int numberOfStronglyConnectedComponents()
