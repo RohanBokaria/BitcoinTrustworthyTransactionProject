@@ -1,5 +1,3 @@
-# Development Log (Date: 10/12/22 -- 10/18/22)
-
 ## Weekly Goals
 Our weekly goals were to read in our dataset and set up our classes.
 ## Specific Tasks Completed (and by who)
