@@ -1,6 +1,4 @@
 
-# Development Log (Date: XX/YY/ZZ -- XX/YY/ZZ)
-
 ## Weekly Goals
 
 This week our goal was basically to set up the repo, discuss project plans and think about how we would go about implementing it.
