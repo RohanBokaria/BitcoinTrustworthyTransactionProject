@@ -15,5 +15,5 @@ All code files can be found in the code/ directory. To run the code:
 Our test data was taken using Stanford Large Network Dataset Collection. It is Bitcoin OTC trust weighted signed network. The link is attached here: http://snap.stanford.edu/data/soc-sign-bitcoin-otc.html.
 
 # Documents
-Our signed contract and development log can be found in the documents/ directory.
+Our signed contract, proposal, and development logs can be found in the documents/ directory.
 
