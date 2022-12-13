@@ -1,6 +1,6 @@
 # BitcoinTrustworthyTransactionProject
 
-#Link to Presentation
+# Link to Presentation
 https://drive.google.com/file/d/1mMAHEfoFTfBETIOpqqsAUSh_jrWa38iv/view?usp=share_link 
 
 # Project Summary
